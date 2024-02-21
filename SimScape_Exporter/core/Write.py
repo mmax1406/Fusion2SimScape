@@ -123,7 +123,7 @@ def write_urdf(joints_dict, links_xyz_dict, inertial_dict, package_name, robot_n
     file_name = save_dir + '/'  +  robot_name + '.urdf'  # the name of urdf file
     repo = package_name  # the repository of binary stl files
     with open(file_name, mode='w') as f:
-        f.write('<robot name="{}"\n'.format(robot_name))
+        f.write('<robot name="{}">'.format(robot_name))
         f.write('\n')
 
     write_link_urdf(joints_dict, repo, links_xyz_dict, file_name, inertial_dict)
